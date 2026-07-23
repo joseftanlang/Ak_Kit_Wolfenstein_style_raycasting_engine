@@ -27,6 +27,14 @@ enum {
 	AC_TASK_DBG_ID,
 	AC_TASK_DISPLAY_ID,
 
+	/* ROOM ENGINE TASKS */
+	ROOM_ENGINE_CAMERA_ID,
+	ROOM_ENGINE_RENDER_ID,
+	ROOM_ENGINE_DRAW_ID,
+	ROOM_ENGINE_PLAYER_ID,
+	ROOM_ENGINE_RAYCASTER_ID,
+	ROOM_ENGINE_MAP_ID,
+
 #if defined(TASK_ZIGBEE_EN)
 	AC_TASK_ZIGBEE_ID,
 #endif
@@ -98,5 +106,15 @@ extern void task_rf24_demo(ak_msg_t*);
 /*****************************************************************************/
 extern void task_polling_zigbee();
 extern void task_polling_console();
+
+/*****************************************************************************/
+/*  DECLARE: Room Engine Task entry point  */
+/*****************************************************************************/
+void task_room_engine_camera(ak_msg_t* msg);
+void task_room_engine_player(ak_msg_t* msg);
+void task_room_engine_raycaster(ak_msg_t* msg);
+void task_room_engine_render(ak_msg_t* msg);
+void task_room_engine_draw(ak_msg_t* msg);
+void task_room_engine_map(ak_msg_t* msg);
 
 #endif //__TASK_LIST_H__

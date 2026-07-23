@@ -20,6 +20,16 @@ const task_t app_task_table[] = {
 	{AC_TASK_DBG_ID				,	TASK_PRI_LEVEL_4	,	task_dbg			},
 	{AC_TASK_DISPLAY_ID			,	TASK_PRI_LEVEL_4	,	task_display		},
 
+	/*************************************************************************/
+	/* ROOM ENGINE TASK */
+	/*************************************************************************/
+	{ROOM_ENGINE_CAMERA_ID		,	TASK_PRI_LEVEL_4	, 	task_room_engine_camera		},
+	{ROOM_ENGINE_RENDER_ID		,	TASK_PRI_LEVEL_4	, 	task_room_engine_render		},
+	{ROOM_ENGINE_DRAW_ID		,	TASK_PRI_LEVEL_4	, 	task_room_engine_draw		},
+	{ROOM_ENGINE_PLAYER_ID		,	TASK_PRI_LEVEL_4	, 	task_room_engine_player		},
+	{ROOM_ENGINE_RAYCASTER_ID	,	TASK_PRI_LEVEL_4	, 	task_room_engine_raycaster	},
+	{ROOM_ENGINE_MAP_ID			,	TASK_PRI_LEVEL_4	, 	task_room_engine_map		},
+
 	#if defined(TASK_ZIGBEE_EN)
 	{AC_TASK_ZIGBEE_ID			,	TASK_PRI_LEVEL_4	,	task_zigbee			},
 	#endif

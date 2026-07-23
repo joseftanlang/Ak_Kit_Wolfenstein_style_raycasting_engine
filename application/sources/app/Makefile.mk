@@ -1,4 +1,6 @@
 include sources/app/screens/Makefile.mk
+include sources/app/room_engine/Makefile.mk
+include sources/app/game_amongus/Makefile.mk
 
 CFLAGS		+= -I./sources/app
 CPPFLAGS	+= -I./sources/app
